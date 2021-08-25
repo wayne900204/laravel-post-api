@@ -9,3 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2021-08-25
 ### Added
 - 創建 Post、Comment 的 Model、Factory、Created、Seeder、Controller
+
+## [0.0.2] - 2021-08-25
+### Added
+- 創建 Database 裡面的欄位。
