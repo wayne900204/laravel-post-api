@@ -13,3 +13,7 @@ php artisan make:model --help
 php artisan make:model Comment --all --api
 php artisan make:model Post --all --api
 ```
+### 啟用 Seeders
+```shell
+php artisan db:seed
+```
