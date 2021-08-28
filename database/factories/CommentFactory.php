@@ -3,6 +3,10 @@
 namespace Database\Factories;
 
 use App\Models\Comment;
+use App\Models\Post;
+
+use App\Models\User;
+use Database\Factories\Helpers\FactoryHelper;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CommentFactory extends Factory
@@ -21,10 +25,12 @@ class CommentFactory extends Factory
      */
     public function definition()
     {
+
         return [
             'body'=>[],
-            'user_id'=>1,
-            'post_id'=>1,
+            // 這邊是為了讓關聯的資料表可以取得 random，因此這邊把他提出去寫了一個 Helpers
+            'user_id'=>FactoryHelper::getRandomModelId(User::class),
+            'post_id'=>FactoryHelper::getRandomModelId(Post::class),
         ];
     }
 }
