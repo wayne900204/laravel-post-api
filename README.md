@@ -17,3 +17,7 @@ php artisan make:model Post --all --api
 ```shell
 php artisan db:seed
 ```
+### 建立 Resource
+```shell
+php artisan make:resource PostResource
+```

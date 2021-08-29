@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ## [0.0.9] - 2021-08-29
 ### Added
+- 新增 PostResource
+
+## [0.0.9] - 2021-08-29
+### Added
 - Database Transaction
 
 ## [0.0.8] - 2021-08-29
