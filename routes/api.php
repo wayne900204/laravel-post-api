@@ -19,10 +19,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/users',[UserController::class,'index']);
-Route::get('/users/{user}', [UserController::class,'show']);
-Route::post('/users', [UserController::class,'store']);
-Route::patch('/users/{user}', [UserController::class,'update']);
-Route::delete('/users/{user}', [UserController::class,'destroy']);
+Route::prefix('V1')->group(
+    function (){
+        \App\Helpers\Routes\RouteHelper::includeRouteFiles(__DIR__ . '/api/V1');
 
-//Route::apiResource('users',UserController::class);
+//        require __DIR__ . '/api/V1/users.php';
+//        require __DIR__ . '/api/V1/posts.php';
+//        require __DIR__ . '/api/V1/comments.php';
+    }
+);
+
+
