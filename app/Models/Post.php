@@ -9,9 +9,26 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'body',
+    ];
+    // 修改器
     protected $casts = [
         'body' => 'array'
     ];
+    // 可以隱藏 api response 的 data
+    protected $hidden = [
+        'title'
+    ];
+    //把將屬性名稱增加到模型中的 appends 屬性： getTitleUpperCaseAttribute
+    protected $appends = [
+        'title_upper_case'
+    ];
+//    // 哪些不要放在 api 資料裡 就是 fillable 的相反
+//    protected $guarded = [
+//        'title'
+//    ];
 
 
     /**
